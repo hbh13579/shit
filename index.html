@@ -105,7 +105,7 @@ body{overflow:hidden;background:#050510;color:#fff}
     </div>
 
     <div class="form-item">
-      <label>性别 / 身份</label>
+      <label>性别</label>
       <select id="gender">
         <option value="">请选择</option>
         <option value="男">男</option>
@@ -176,7 +176,6 @@ const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
 let particleAnimId = null;
-let textRevealed = false;
 
 function resizeCanvas(){
   canvas.width = window.innerWidth;
@@ -254,7 +253,7 @@ document.getElementById('submitBtn').addEventListener('click', ()=>{
     return;
   }
   if(!gender){
-    alert("请选择性别/身份");
+    alert("请选择性别");
     return;
   }
 
@@ -264,7 +263,7 @@ document.getElementById('submitBtn').addEventListener('click', ()=>{
     姓名：${name}<br>
     出生日期：${y}年${m}月${d}日<br>
     年龄：${age} 岁<br>
-    身份：${gender}
+    性别：${gender}
   `;
 
   const formWrap = document.getElementById('formWrap');
